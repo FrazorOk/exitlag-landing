@@ -1,0 +1,53 @@
+.map {
+	margin-top: 85px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		max-width: 900px;
+	}
+
+	.undertitle {
+		margin-top: 32px;
+	}
+
+	&__img {
+		margin-top: 87px;
+		object-fit: contain;
+		width: 100%;
+		opacity: 0;
+		transition: all 0.8s ease 0s;
+	}
+
+	&__img._active-anim {
+		opacity: 1;
+	}
+
+	.red-arrows {
+		margin-top: 30px;
+		width: 25px;
+		height: 28px;
+	}
+}
+
+@media (max-width: 770px) {
+	.map {
+		margin-top: 65px;
+
+		.undertitle {
+			margin-top: 24px;
+		}
+
+		&__img {
+			margin-top: 37px;
+		}
+
+		.red-arrows {
+			margin-top: 24px;
+		}
+	}
+}

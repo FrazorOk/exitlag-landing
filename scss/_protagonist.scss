@@ -1,0 +1,141 @@
+.protagonist {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		margin-top: 70px;
+	}
+
+	.undertitle {
+		margin-top: 46px;
+	}
+
+	&__cards {
+		margin-top: 85px;
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		flex-wrap: wrap;
+	}
+
+	&__card {
+		position: relative;
+		top: 0;
+		left: 0;
+		flex: 0 1 25%;
+		min-width: 274px;
+		max-width: 274px;
+		min-height: 292px;
+		padding: 20px 22px;
+		background: #171719;
+		border: 1.5px solid #a00000;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__card:hover {
+		transform: scale(1.1);
+	}
+
+	&__card::after {
+		content: '';
+		position: absolute;
+		top: 24px;
+		left: 22px;
+		width: 21px;
+		height: 18px;
+		background-image: url('../img/icons/twitter.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&__avatar {
+		width: 81px;
+		height: 81px;
+		border: 2px solid #a10a0b;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 7px;
+
+		img {
+			border-radius: 50%;
+			object-fit: contain;
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		margin-top: 19px;
+	}
+
+	&__under-name {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		text-align: center;
+		color: #ffffff;
+		margin-top: 8px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: #b4b4b4;
+		margin-top: 13px;
+
+		span {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+
+	.red-btn {
+		margin-top: 100px;
+	}
+}
+
+@media (max-width: 770px) {
+	.protagonist {
+		h2 {
+			margin-top: 36px;
+		}
+
+		.undertitle {
+			margin-top: 26px;
+		}
+
+		&__cards {
+			margin-top: 36px;
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+		.red-btn {
+			margin-top: 64px;
+		}
+	}
+}
+
+@media (max-width: 427px) {
+	.protagonist {
+		.red-btn {
+			margin-top: 36px;
+		}
+	}
+}

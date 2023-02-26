@@ -1,0 +1,161 @@
+.struggling {
+	margin-top: 87px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__contant {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		padding: 227px 50px 98px 50px;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 100px;
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/Fallen-1\ 1.png);
+		background-position: bottom right;
+		background-size: contain;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+
+	&__contant._active-anim &__img {
+		animation-name: image;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	&__contant::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: calc(100% - 112px);
+		top: 112px;
+		left: 0;
+		background-color: #171719;
+		border-radius: 10px;
+		z-index: 0;
+	}
+
+	&__text {
+		flex: 0 1 50%;
+		z-index: 1;
+
+		h2 {
+			margin-top: 36px;
+			text-align: start;
+			font-size: 36px;
+			line-height: 110.8%;
+		}
+	}
+
+	.logotype {
+		width: 250px;
+		height: 56px;
+	}
+	.red-btn {
+		padding: 18px 50px;
+		margin-top: 33px;
+	}
+	.red-arrows {
+		margin-top: 76px;
+		width: 25.1px;
+		height: 28.21px;
+	}
+}
+
+@keyframes image {
+	0% {
+		left: 100px;
+	}
+	80% {
+		left: -150px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.struggling {
+		&__text {
+			flex: 0 1 70%;
+		}
+	}
+}
+
+@media (max-width: 770px) {
+	.struggling {
+		margin-top: 57px;
+
+		&__contant {
+			padding: 227px 30px 50px 30px;
+		}
+
+		&__text {
+			flex: 0 1 100%;
+			z-index: 1;
+
+			h2 {
+				margin-top: 36px;
+				font-size: 30px;
+			}
+		}
+
+		.logotype {
+			width: 162px;
+			height: 36px;
+		}
+		.red-btn {
+			padding: 18px 20px;
+			margin-top: 33px;
+		}
+		.red-arrows {
+			margin-top: 46px;
+		}
+	}
+}
+@media (max-width: 427px) {
+	.struggling {
+		margin-top: 47px;
+
+		&__contant {
+			padding: 60px 20px 30px 20px;
+		}
+		&__contant::after {
+			height: calc(100% - 30px);
+			top: 30px;
+		}
+		&__img {
+			display: none;
+		}
+
+		&__text {
+			h2 {
+				font-size: 20px;
+			}
+		}
+
+		.logotype {
+			width: 121px;
+			height: 27px;
+		}
+		.red-btn {
+			padding: 10px 10px;
+			margin-top: 33px;
+		}
+		.red-arrows {
+			margin-top: 36px;
+		}
+	}
+}

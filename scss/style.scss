@@ -1,0 +1,163 @@
+// const
+@import '_nullstyle.scss';
+@import '_constants.scss';
+@import '_header.scss';
+@import '_advantages.scss';
+@import '_scrinshot.scss';
+@import '_map.scss';
+@import '_howeasy.scss';
+@import '_best-players.scss';
+@import '_protagonist.scss';
+@import '_games.scss';
+@import '_struggling.scss';
+@import '_questions.scss';
+@import '_footer.scss';
+
+.wrapper {
+	font-family: 'Ubuntu', sans-serif;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	margin: 0 auto;
+	color: #ffffff;
+	background: #0b0c0f;
+}
+
+[class*='__container'] {
+	max-width: $widthContainer;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.logotype {
+	background-image: url('../img/icons/Logotype.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+h2 {
+	font-family: 'Michroma', sans-serif;
+	max-width: 780px;
+	word-spacing: 6px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 110.8%;
+	text-align: center;
+	color: #ffffff;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	span {
+		font-weight: 700;
+		text-align: center;
+	}
+}
+h2._active-anim {
+	transform: translate(0);
+	opacity: 1;
+}
+
+.undertitle {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 140.62%;
+	text-align: center;
+	color: #a6a6a6;
+	transform: translate(0, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0.4s;
+
+	span {
+		font-weight: 700;
+	}
+}
+.undertitle._active-anim {
+	transform: translate(0);
+	opacity: 1;
+}
+
+.red-btn {
+	display: block;
+	text-align: center;
+	width: fit-content;
+	padding: 12px 12px;
+	background: #a10a0b;
+	border-radius: 8px;
+	transition: box-shadow 0.3s ease 0s;
+	transform: translate(0, 120%);
+	opacity: 0;
+
+	span {
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 150%;
+		text-align: center;
+		color: #ffffff;
+	}
+}
+.red-btn._active-anim {
+	transition: transform 0.8s ease 0s;
+	transition-property: transform, opacity;
+	transform: translate(0);
+	opacity: 1;
+}
+.red-btn:hover {
+	transition: box-shadow 0.3s ease 0s;
+	box-shadow: 0px 0px 15px 4.5px rgba(255, 0, 0, 0.415);
+}
+
+.underBtn {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	color: #a6a6a6;
+	transition: all 0.8s ease 0.4s;
+	opacity: 0;
+}
+.underBtn._active-anim {
+	opacity: 1;
+}
+
+.red-arrows {
+	background-image: url('../img/icons/redArrows.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+@media (max-width: 770px) {
+	h2 {
+		font-size: 30px;
+		max-width: 580px;
+	}
+
+	.undertitle {
+		font-size: 16px;
+	}
+
+	.red-btn {
+		padding: 8px 8px;
+
+		span {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 427px) {
+	h2 {
+		font-size: 20px;
+		line-height: 25px;
+	}
+}

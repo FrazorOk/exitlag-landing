@@ -1,0 +1,157 @@
+.questions {
+	margin-top: 31px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		max-width: 100%;
+	}
+	&__spoller {
+		margin-top: 86px;
+		width: 100%;
+	}
+
+	.spoller {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+
+		&__item {
+			width: 100%;
+			background: #171719;
+			border: 1px solid #a10a0b;
+			border-radius: 21px;
+			color: #ffffff;
+			padding: 30px 0;
+		}
+
+		&__title {
+			font-family: 'Michroma', sans-serif;
+			font-weight: 700;
+			font-size: 20px;
+			text-transform: uppercase;
+			line-height: 110.8%;
+			text-align: center;
+			color: #ffffff;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			background: none;
+			cursor: default;
+			padding: 10px 121px;
+			transition: color 0.2s ease 0s;
+		}
+
+		&__title:hover {
+			color: #a10a0b;
+		}
+
+		&__text {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 140.62%;
+			cursor: default;
+			padding: 16px 121px;
+		}
+	}
+	.spoller._init .spoller__title {
+		cursor: pointer;
+	}
+	.spoller._init .spoller__title::after {
+		content: '';
+		width: 23px;
+		height: 11px;
+		background-image: url(../img/icons/redArrow.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		position: absolute;
+		right: 56px;
+		top: 50%;
+		transform: translate(0, -50%);
+		transition: all 0.3s ease 0s;
+	}
+	.spoller._init .spoller__title::after {
+		transform: translate(0, -50%) rotate(-90deg);
+	}
+	.spoller._init .spoller__title._active::after {
+		transform: translate(0, -50%) rotate(0deg);
+	}
+
+	.red-btn {
+		margin-top: 150px;
+		padding: 18px 45px;
+	}
+}
+
+@media (max-width: 770px) {
+	.questions {
+		&__spoller {
+			margin-top: 56px;
+		}
+
+		.spoller {
+			gap: 20px;
+
+			&__item {
+				padding: 20px 0;
+			}
+
+			&__title {
+				font-size: 18px;
+				padding: 10px 70px;
+				line-height: 30px;
+			}
+
+			&__text {
+				font-size: 20px;
+				padding: 16px 70px;
+			}
+		}
+		.spoller._init .spoller__title::after {
+			right: 26px;
+		}
+		.red-btn {
+			margin-top: 70px;
+			padding: 18px 45px;
+		}
+	}
+}
+
+@media (max-width: 427px) {
+	.questions {
+		&__spoller {
+			margin-top: 36px;
+		}
+
+		.spoller {
+			gap: 15px;
+
+			&__item {
+				padding: 10px 0;
+			}
+
+			&__title {
+				font-size: 14px;
+				padding: 10px 40px;
+				line-height: 24px;
+			}
+
+			&__text {
+				font-size: 16px;
+				padding: 16px 30px;
+			}
+		}
+		.spoller._init .spoller__title::after {
+			right: 10px;
+		}
+
+		.red-btn {
+			margin-top: 36px;
+		}
+	}
+}

@@ -1,0 +1,155 @@
+.how-easy {
+	margin-top: 62px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.undertitle {
+		margin-top: 36px;
+	}
+
+	&__cards {
+		margin-top: 85px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 28px;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 232px;
+		width: 185px;
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(-100%, 0);
+		opacity: 0;
+	}
+
+	&__cards._active-anim {
+		.how-easy__card:nth-child(1) {
+			z-index: 6;
+			transition: all 0.5s ease 0.2s;
+		}
+		.how-easy__card:nth-child(2) {
+			z-index: 5;
+			transition: all 0.5s ease 0.4s;
+		}
+		.how-easy__card:nth-child(3) {
+			z-index: 4;
+			transition: all 0.5s ease 0.6s;
+		}
+		.how-easy__card:nth-child(4) {
+			z-index: 3;
+			transition: all 0.5s ease 0.8s;
+		}
+		.how-easy__card:nth-child(5) {
+			z-index: 2;
+			transition: all 0.5s ease 1s;
+		}
+		.how-easy__card {
+			transform: translate(0);
+			opacity: 1;
+		}
+	}
+
+	&__card::after {
+		content: '';
+		position: absolute;
+		top: 30px;
+		right: -22px;
+		width: 28px;
+		height: 28px;
+		background-image: url('../img/icons/redArrows.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		transform: rotate(-90deg);
+	}
+	&__card:last-child::after {
+		display: none;
+	}
+
+	&__icon {
+		width: 85px;
+		height: 85px;
+		object-fit: contain;
+	}
+
+	&__subtitle {
+		margin-top: 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 18px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__number {
+		margin-top: 10px;
+		font-size: 72px;
+		line-height: 83px;
+	}
+
+	.red-btn {
+		margin-top: 80px;
+		padding: 12px 46px;
+	}
+}
+
+@media (max-width: 427px) {
+	.how-easy {
+		margin-top: 42px;
+
+		.undertitle {
+			margin-top: 24px;
+		}
+
+		&__cards {
+			margin-top: 45px;
+			gap: 45px;
+		}
+
+		&__card {
+			min-height: 0px;
+		}
+
+		&__card::after {
+			top: 100%;
+			left: 50%;
+			transform: rotate(0deg) translate(-50%, 0);
+		}
+
+		&__icon {
+			width: 65px;
+			height: 65px;
+			object-fit: contain;
+		}
+
+		&__subtitle {
+			margin-top: 10px;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 18px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&__number {
+			font-size: 42px;
+			line-height: 52px;
+		}
+
+		.red-btn {
+			margin-top: 34px;
+			padding: 12px 46px;
+		}
+	}
+}

@@ -1,0 +1,216 @@
+.best-players {
+	margin-top: 130px;
+
+	h2 {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__slider {
+		margin: 0 auto;
+		margin-top: 85px;
+	}
+
+	.undertitle {
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	.swiper-slide {
+		width: 385px;
+		height: 496px;
+		background: #171719;
+		border: 2px solid #a10a0b;
+		border-radius: 20px;
+		padding: 53px 23px;
+		background-image: url('../img/players/1.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-x: 10px;
+	}
+	.swiper-slide:nth-child(2) {
+		background-image: url('../img/players/2.svg');
+		background-position-x: -55px;
+		background-position-y: 40px;
+	}
+	.swiper-slide:nth-child(3) {
+		background-image: url('../img/players/3.svg');
+		background-position-x: 115px;
+		background-position-y: 25px;
+		background-size: 70%;
+	}
+	.swiper-slide:nth-child(4) {
+		background-image: url('../img/players/4.svg');
+		background-position-x: 40px;
+		background-position-y: 0px;
+		background-size: 90%;
+	}
+
+	h4 {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 46px;
+	}
+
+	&__game {
+		margin-top: 13px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 18px;
+		color: #9c9c9c;
+	}
+
+	&__followers {
+		margin-top: 23px;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 46px;
+	}
+
+	&__under-followers {
+		margin-top: 0px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	&__awards {
+		position: relative;
+		left: 0;
+		top: 0;
+		padding-left: 39px;
+		margin-top: 36px;
+		max-width: 161px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	&__awards::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 32px;
+		height: 32px;
+		background-image: url('../img/icons/star.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	.swiper {
+		position: relative;
+		top: 0;
+		left: 0;
+		padding-bottom: 42px;
+	}
+	.swiper-pagination {
+		position: absolute;
+	}
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: #d9d9d9;
+		opacity: 1;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #a10a0b;
+	}
+
+	.red-arrows {
+		width: 25px;
+		height: 28px;
+		margin: 0 auto;
+		margin-top: 75px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.best-players {
+		margin-top: 46px;
+
+		h2 {
+			max-width: 800px;
+		}
+
+		&__slider {
+			max-width: 563px;
+			margin-top: 36px;
+		}
+
+		.undertitle {
+			margin-top: 24px;
+		}
+
+		.swiper-slide {
+			padding: 20px 20px;
+			height: 322px;
+		}
+		.swiper-slide:nth-child(2) {
+			background-position-x: -38px;
+		}
+		.swiper-slide:nth-child(3) {
+			background-position-x: 80px;
+		}
+		.swiper-slide:nth-child(4) {
+			background-position-x: 24px;
+		}
+
+		h4 {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 26px;
+		}
+
+		&__game {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		&__followers {
+			margin-top: 18px;
+			font-size: 24px;
+			line-height: 26px;
+		}
+
+		&__under-followers {
+			font-size: 14px;
+		}
+
+		&__awards {
+			padding-left: 29px;
+			margin-top: 20px;
+			max-width: 131px;
+			font-size: 14px;
+		}
+
+		&__awards::after {
+			width: 24px;
+			height: 24px;
+		}
+
+		.red-arrows {
+			margin-top: 35px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.best-players {
+		h2 {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		&__slider {
+			max-width: 260px;
+		}
+		.swiper-slide {
+			height: 322px;
+		}
+		.swiper-slide:nth-child(2) {
+			background-position-x: -28px;
+		}
+	}
+}
