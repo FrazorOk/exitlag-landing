@@ -92,7 +92,6 @@ h6 {
 .header {
   min-height: 691px;
   background-image: url("../img/HEADER 1.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
